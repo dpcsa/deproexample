@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Article</string>
+    <string name="m_catalog">Каталог</string>
+
+    <string name="add">Добавить</string>
+    <string name="oem">ОЕМ</string>
+    <string name="code">Код\u0020</string>
+
+    <string name="analog">Аналоги</string>
+    <string name="not_analog">Аналогов нет</string>
+    <string name="clubs">[{\"clubId\":\"1\",\"club_name\":\"Клуб 1\"},{\"clubId\":\"2\",\"club_name\":\"Клуб 2\"}]</string>
+    <string name="fitness">Фитнес</string>
+
+    <string name="attention">Внимание</string>
+    <string name="finishOk">Вы хотите выйти из приложения?</string>
+
+    <string-array name="descript_tab_name">
+        <item>Описание</item>
+        <item>Характеристки</item>
+    </string-array>
+</resources>

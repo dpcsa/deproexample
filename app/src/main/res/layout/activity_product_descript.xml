@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_header"
+        android:background="@color/primary"
+        android:elevation="@dimen/pad_6">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="@dimen/h_header"
+            android:layout_height="@dimen/h_header"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nar_light" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/st_20_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/pad_72"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/name_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool"
+        android:background="@color/gray">
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/st_18_black"
+            android:lineSpacingExtra="9sp"
+            android:layout_marginRight="@dimen/pad_24"
+            android:layout_marginLeft="@dimen/pad_24"
+            android:layout_marginTop="@dimen/pad_10"
+            android:layout_marginBottom="@dimen/pad_10"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad_48"
+        android:layout_below="@+id/name_panel"
+        android:background="@color/gray">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/text_color_50"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/text_color"
+        app:tabTextColor="@color/text_color_50"
+        app:tabSelectedTextColor="@color/text_color"
+        app:tabIndicatorHeight="@dimen/pad_2"
+        android:layout_below="@+id/name_panel" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabs"/>
+
+</RelativeLayout>

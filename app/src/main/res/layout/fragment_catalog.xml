@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_header"
+        android:background="@color/primary">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/h_header"
+            android:layout_height="@dimen/h_header"
+            android:padding="12dp"
+            android:src="@drawable/menu" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginStart="@dimen/pad_72"
+            android:text="@string/m_catalog" />
+        />
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textAllCaps="true"
+                android:layout_marginLeft="@dimen/pad_16"
+                android:textColor="@color/text_color"
+                android:text="Новинки"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="304dp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="304dp"
+                    android:layout_marginTop="@dimen/pad_4"
+                    android:layout_marginRight="@dimen/pad_8"
+                    android:layout_marginLeft="@dimen/pad_8"/>
+
+                <LinearLayout
+                    android:id="@+id/progr"
+                    android:layout_width="@dimen/pad_80"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/accent_50"
+                    android:visibility="invisible"
+                    android:gravity="center">
+
+                    <ProgressBar
+                        android:id="@+id/progress"
+                        android:layout_width="@dimen/pad_40"
+                        android:layout_height="@dimen/pad_40"
+                        android:indeterminateTint="@color/primary_progress" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/pad_4"
+                android:layout_marginLeft="@dimen/pad_16"
+                android:textColor="@color/text_color"
+                android:text="Каталог"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/pad_4"
+                android:paddingRight="@dimen/pad_8"
+                android:paddingLeft="@dimen/pad_8"
+                android:background="@color/gray"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

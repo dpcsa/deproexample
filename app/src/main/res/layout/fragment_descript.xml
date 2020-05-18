@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="310dp"
+                android:elevation="@dimen/pad_8"
+                android:layout_marginTop="@dimen/pad_8"
+                android:layout_marginLeft="@dimen/pad_8"
+                android:layout_marginRight="@dimen/pad_8">
+                <ImageView
+                    android:id="@+id/picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+                <LinearLayout
+                    android:layout_width="@dimen/pad_52"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="@dimen/pad_10"
+                        android:layout_height="@dimen/pad_14"/>
+                    <ImageView
+                        android:id="@+id/bonus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad_4"
+                        android:src="@drawable/bonys"/>
+
+                    <ImageView
+                        android:id="@+id/gift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad_4"
+                        android:src="@drawable/gift_flag" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/pad_24"
+                android:layout_marginTop="@dimen/pad_20"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/st_12_black_50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Код\u0020" />
+
+                    <TextView
+                        android:id="@+id/product_code"
+                        style="@style/st_12_black_50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/pad_10"
+                    android:paddingLeft="@dimen/pad_1"
+                    android:paddingRight="@dimen/pad_1"
+                    android:layout_marginRight="@dimen/pad_10"
+                    android:background="@color/black_30">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/pad_12"
+                        android:paddingRight="@dimen/pad_10"
+                        android:background="@color/gray">
+
+                        <TextView
+                            style="@style/st_12_black_50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/oem" />
+
+                        <TextView
+                            android:id="@+id/oem"
+                            style="@style/st_12_black_50"
+                            android:layout_width="@dimen/pad_100"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/st_12_black_50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Каталожный номер" />
+
+                    <TextView
+                        android:id="@+id/catalog_code"
+                        style="@style/st_12_black_50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad_24"
+                android:layout_marginTop="@dimen/pad_20"
+                android:layout_marginBottom="@dimen/pad_24">
+
+                <TextView
+                    style="@style/st_14_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/pad_24"
+                    android:text="Цена" />
+
+                <com.dpcsa.compon.custom_components.ComponTextView
+                    android:id="@+id/price"
+                    style="@style/st_16_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/pad_72"
+                    app:numberFormat="#0.00"
+                    android:textStyle="bold"/>
+
+                <com.dpcsa.compon.custom_components.ComponTextView
+                    android:id="@+id/extra_bonus"
+                    style="@style/st_14_primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    app:numberFormat="#0.00"
+                    android:layout_marginRight="@dimen/pad_24" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/analog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/text_blue"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/pad_24"
+                android:layout_marginTop="@dimen/pad_24"
+                android:layout_marginBottom="@dimen/pad_4"
+                android:text="@string/analog"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/pad_8"
+                android:layout_marginLeft="@dimen/pad_8"
+                android:layout_marginBottom="@dimen/pad_24">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/not_analog"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad_50"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    style="@style/st_16_black"
+                    android:text="@string/not_analog"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
